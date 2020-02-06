@@ -1,0 +1,67 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block title %}Hello Ajouter un produit ou astuces!{% endblock %}
+{% block stylesheets %}
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.css" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+    {% include 'admin/partials/navbar.html.twig'%}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            {% include 'admin/partials/flash.html.twig'%}
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Admin</a>
+                </li>
+                <li class="breadcrumb-item active">Liste des produits et astuces</li>
+            </ol>
+
+            <a href="{{ path('admin_add') }}"><button class="btn btn-success">Ajouter unn produit</button></a>
+            <table class="table table-striped" style="margin-top: 5px;">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nom du produit</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for produit in produits %}
+                    <tr>
+
+                        <th scope="col">{{ produit.id }}</th>
+                        <th scope="col">{{ produit.nom }}</th>
+                        <th scope="col"><img src="{{ vich_uploader_asset(produit, 'imageFile') }}" alt="" style="height: 40px"></th>
+                        <th scope="col">
+                            {% if produit.statue == 0 %}
+                                <a href="{{ path('admin_produit_send', {id: produit.id}) }}">
+                                    <button class="btn btn-success">Publier <i class="fa fa-send"></i></button>
+                                </a>
+                            {% else %}
+                                <a href="{{ path('admin_produit_send', {id: produit.id}) }}">
+                                    <button class="btn btn-warning">Retiré <i class="fa fa-send"></i></button>
+                                </a>
+                            {% endif %}
+                            <a href="{{ path('admin_produit_update', {id: produit.id}) }}">
+                                <button class="btn btn-success">Voir <i class="fa fa-eye"></i></button>
+                            </a>
+                            <a href="{{ path('admin_produit_update', {id: produit.id}) }}">
+                                <button class="btn btn-warning">modifier <i class="fa fa-edit"></i></button>
+                            </a>
+                            <a href="{{ path('admin_produit_delete', {id: produit.id}) }}">
+                                <button class="btn btn-danger">supprimer <i class="fa fa-trash"></i></button>
+                            </a>
+                        </th>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+{% endblock %}

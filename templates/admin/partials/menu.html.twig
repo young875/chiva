@@ -1,0 +1,20 @@
+<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" >
+        <a class="nav-link" href="#">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Accueil</span>
+        </a>
+    </li>
+    <li class="nav-item" data-toggle="tooltip" data-placement="right">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#voiture" data-parent="#voiture">
+            <i class="fa fa-fw fa-home"></i>
+            <span class="nav-link-text">Liste produits</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="voiture">
+            <li>
+                <a href="{{ path('admin_produits') }}">Voir</a>
+                <a href="{{ path('admin_add') }}">ajouter</a>
+            </li>
+        </ul>
+    </li>
+</ul>

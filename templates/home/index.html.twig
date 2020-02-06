@@ -1,0 +1,198 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenu sur le site du grand Marabout Chiva{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .contact_form .form-control{
+            margin-bottom: 10px!important;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+{% include 'partials/menu.html.twig' %}
+
+
+<ul class='slideshow'>
+    <li>
+        <span>Summer</span>
+    </li>
+    <li>
+        <span>Fall</span>
+    </li>
+    <li>
+        <span>Winter</span>
+    </li>
+    <li>
+        <span>Spring</span>
+    </li>
+</ul>
+
+<div class="parallax first-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 wow slideInLeft hidden-xs hidden-sm">
+                <div class="contact_form">
+                    <h3><i class="fa fa-envelope-o grd1 global-radius"></i> Contactez le maître marabout chiva</h3>
+                    {{ form_start(form) }}
+                    <fieldset class="row-fluid">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            {{ form_widget(form.nom) }}
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            {{ form_widget(form.mail) }}
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            {{ form_widget(form.sujet) }}
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            {{ form_widget(form.message) }}
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                            <button type="submit" value="Envoyer"  class="btn btn-light btn-radius btn-brd grd1 btn-block">Envoyer</button>
+                        </div>
+                    </fieldset>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="big-tagline clearfix">
+                    <h2>
+                        Épanouissement professionnel
+
+                    </h2>
+                    <p class="lead">Avec le grand maitre marabout chiva vous êtes en de bonne mains.
+                        Amour, bonheur, richesse, chance, protection et guérison seront toujours avec vous.
+                    </p>
+                    <a data-scroll href="{{ path('produits') }}" class="btn btn-light btn-radius grd1 btn-brd">Nos produits</a>
+                </div>
+            </div>
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
+    <div >
+        <audio controls style="width: 100%" autoplay >
+            <source src="/image/mani pad.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+<div class="about-box">
+    <div class="container">
+        <div class="row">
+            <div class="top-feature owl-carousel owl-theme">
+                <div class="item">
+                    <div class="single-feature">
+                        <div class="icon"><img src="/uploads/icon-01.png" class="img-responsive" alt=""></div>
+                        <h4><a href="#">Problèmes familiaux</a></h4>
+                        <p>
+                        <ul>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Protection spirituelle</li>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Fécondité</li>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Retour d'affection</li>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Contre envoûtement etc..</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-feature">
+                        <div class="icon"><img src="/uploads/icon-02.png" class="img-responsive" alt=""></div>
+                        <h4><a href="#"></a></h4>
+                        <p>
+                        <ul>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Impuissance</li>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Fausse couches etc...</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="single-feature">
+                        <div class="icon"><img src="/uploads/icon-03.png" class="img-responsive" alt=""></div>
+                        <h4><a href="#">Épanouissement professionnel</a></h4>
+                        <p>
+                        <ul>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Abondance de clients</li>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Recherche d'emploi</li>
+                            <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Évolution de carrière etc...</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr1">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                    <img src="/image/maitre.jpg" alt="marabout-chiva" class="img-responsive">
+                </div><!-- end media -->
+            </div>
+            <div class="col-md-6">
+                <div class="message-box right-ab">
+                    <h4>A propos du Grand Maître Marabout Chiva</h4>
+                    <h2>Bienvenue chez le Grand Maître Marabout Chiva</h2>
+                    <p>Vous êtes venu à bon port. Avec l'aide du grand maitre marabout africain Chiva vous avez la solution rapide et efficace à tous vos problèmes.</p>
+                    <p>Initié par son grand-père en Afrique, ses pouvoirs occultes sont appréciés et sollicités par celles et ceux qui ont des problèmes et qui n'ont pas eu satisfaction dans leurs attentes auprès d'autres marabouts de paris et africain. Le marabout chiva vous apporte des solutions dans plusieurs domaine. </p>
+                    <a href="{{ path('contact') }}" class="btn btn-light btn-radius grd1 btn-brd"> En savoir plus </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="agent" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_02.png');">
+    <div class="container">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>A propos de maitre Chiva</h3>
+                <p class="lead">Grand maitre spirituel d'Afrque CHIVA,la force tout simplement</p>
+            </div><!-- end col -->
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="message-box">
+                    <h2>Maitre Chiva</h2>
+                    <p class="lead">
+                        Moi grand maitre marabout Chiva, je suis reconnu en Afrique et dans monde entier tout simplement grâce à ma spécialité et l'aide que je porte à des personnes vivant dans des situations difficiles.
+                    </p>
+                    <p>
+                        Mes compétences dans le domaine de la spiritualité, l’astrologie ; la voyance, l'occultisme, la géomancie, le maraboutage, la magie et autres domaines du monde visible et invisible ne sont plus à démontrer.
+Beaucoup de prix m'ont été décernés et tout ceci grâce à mon savoir-faire, ma franchise, mon exactitude; ma bienveillance vis à vis de mes clients.
+
+                    </p>
+
+                    <a href="{{ path('contact') }}" data-scroll class="btn btn-light global-radius btn-brd grd1 effect-1">Contactez-nous</a>
+                </div><!-- end messagebox -->
+            </div><!-- end col -->
+            <div class="col-md-3">
+                <div class="post-media wow fadeIn">
+                    <img src="/image/chiva.png" alt="" class="img-responsive">
+                </div><!-- end media -->
+            </div><!-- end col -->
+            <div class="col-md-3">
+                <div class="agencies_meta clearfix">
+                    <span><i class="fa fa-envelope "></i> <a href="mailto:info@marabout-chiva.com">info@marabout-chiva.com</a></span>
+                    <span><i class="fa fa-link "></i> <a href="#">www.marabout-chiva.com</a></span>
+                    <span><i class="fa fa-phone-square "></i> 00229 979 032 57</span>
+                    <span><i class="fa fa-whatsapp "></i> 00229 979 032 57</span>
+                    <span><i class="fa fa-facebook-square "></i> <a href="#">facebook.com/tagline</a></span>
+                </div><!-- end agencies_meta -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div>
+</div>
+<!-- end section -->
+
+    {% include 'partials/footer.html.twig' %}
+
+
+
+{% endblock %}

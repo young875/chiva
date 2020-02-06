@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos produits à efficacité rapide{% endblock %}
+
+{% block body %}
+
+    {% include 'partials/menu.html.twig' %}
+
+
+    <div class="all-title-box3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="color: white">Produits</h2>
+                    <!-- Breadcrumbs -->
+                    <nav id="breadcrumbs">
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li>Produits</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>Produits</h3>
+                    <p class="lead">
+                        Voici quelques produits, qui sont destinés à votre bien être et, votre épanouissement personnel et professionnel
+                    </p>
+                </div><!-- end col -->
+            </div><!-- end title -->
+
+            <div id="da-thumbs" class="da-thumbs portfolio">
+                {% for produit in produits %}
+                    <div class="post-media_g pitem item-w1 item-h1 cat1">
+                        <a href="{{ vich_uploader_asset(produit, 'imageFile') }}" data-rel="prettyPhoto[gal]">
+                            <img src="{{ vich_uploader_asset(produit, 'imageFile') }}" alt="" class="img-responsive" style="height: 254px; width: 350px">
+                            <div>
+                                <i class="flaticon-unlink"></i>
+                            </div>
+                        </a>
+                        <p>
+                            <strong style="color: #a8cf45;">Nom:</strong> {{ produit.nom }} <br>
+                            <strong style="color: #a8cf45;">Action:</strong> {{ produit.action }} <br>
+                            <a href="{{ path('show', {'slug': produit.slug}) }}" class="btn btn-light btn-radius grd1"> Voir la description </a>
+                        </p>
+                    </div>
+                {% endfor %}
+
+            </div><!-- end portfolio -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+    <div class="container text-center">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {{ knp_pagination_render(produits) }}
+            </ul>
+        </nav>
+    </div>
+
+
+
+    {% include 'partials/footer.html.twig' %}
+
+{% endblock %}

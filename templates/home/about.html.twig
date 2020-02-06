@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}À propos du marabout Chiva{% endblock %}
+
+{% block body %}
+
+    {% include 'partials/menu.html.twig' %}
+
+
+    <div class="all-title-box2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="color: white">A propos du grand maitre marabout chiva</h2>
+                    <!-- Breadcrumbs -->
+                    <nav id="breadcrumbs">
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li>A propos</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-box">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>A propos du grand maitre marabout chiva</h3>
+                    <p>Vous êtes venu à bon port. Avec l'aide du grand maitre marabout africain chiva vous avez la solution rapide et efficace à tous vos problèmes.
+                        <br>
+                        Initié par son grand-père en Afrique, ses pouvoirs occultes sont appréciés et sollicités par celles et ceux qui ont des problèmes et qui n'ont pas eu satisfaction dans leurs attentes auprès d'autres marabouts de paris et africain.
+                        Le marabout chiva vous apporte des solutions dans plusieurs domaine.
+
+                    </p>
+                </div><!-- end col -->
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-sm-12">
+                    <div class="single-services">
+                        <div class="single-services-img">
+                            <img src="/uploads/icon-01.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="single-services-desc">
+                            <h4><a href="{{ path('contact') }}">Problèmes familiaux</a></h4>
+                            <p>
+                                <ul>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Protection spirituelle</li>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Fécondité</li>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Retour d'affection</li>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Contre envoûtement etc..</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <a href="{{ path('contact') }}" class="btn btn-light btn-radius grd1 btn-brd"> Plus d'info </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-sm-12">
+                    <div class="single-services">
+                        <div class="single-services-img">
+                            <img src="/uploads/icon-02.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="single-services-desc">
+                            <h4><a href="{{ path('contact') }}">Guérison par les plantes</a></h4>
+                            <p>
+                                <ul>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Impuissance</li>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Fausse couches etc...</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <a href="{{ path('contact') }}" class="btn btn-light btn-radius grd1 btn-brd"> Plus d'info </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-sm-12">
+                    <div class="single-services">
+                        <div class="single-services-img">
+                            <img src="/uploads/icon-03.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="single-services-desc">
+                            <h4><a href="{{ path('contact') }}">Épanouissement professionnel</a></h4>
+                            <p>
+                                <ul>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Abondance de clients</li>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Recherche d'emploi</li>
+                                    <li><i class="fa fa-hand-o-right" style="color: #a8cf45"></i> Évolution de carrière etc...</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <a href="{{ path('contact') }}" class="btn btn-light btn-radius grd1 btn-brd"> Plus d'info </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- end section -->
+
+
+    {% include 'partials/footer.html.twig' %}
+
+{% endblock %}

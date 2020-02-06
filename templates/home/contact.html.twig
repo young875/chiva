@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Contactez le grand maitre marabout chiva
+{% endblock %}
+
+{% block body %}
+
+    {% include 'partials/menu.html.twig' %}
+    <div class="all-title-box1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 style="color: white">Contact</h2>
+                    <!-- Breadcrumbs -->
+                    <nav id="breadcrumbs">
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li>Contact</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="support" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Contactez le grand maitre marabout chiva</h3>
+                <p class="lead">. <br>
+                    <strong>Amour, bonheur, richesse, chance, protection et guerison</strong> seront toujours avec vous</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact_form">
+                        <!-- notifications -->
+                        {{ form_start(form) }}
+                        <fieldset class="row-fluid">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                {{ form_widget(form.titre) }}
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                {{ form_widget(form.prenom) }}
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                {{ form_widget(form.nom) }}
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                {{ form_widget(form.mail) }}
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                {{ form_widget(form.telephone) }}
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                {{ form_widget(form.sujet) }}
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                {{ form_widget(form.message) }}
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                <button type="submit" value="Envoyer"  class="btn btn-light btn-radius btn-brd grd1 btn-block">Envoyer</button>
+                            </div>
+                        </fieldset>
+
+                        {{ form_end(form) }}
+                    </div>
+                </div><!-- end col -->
+                <div class="col-md-6">
+                    <div class="right-box-contact">
+                        <h4>Téléphone</h4>
+                        <div class="support-info">
+                            <div class="info-title">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                00229 979 032 57 <br><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                00229 979 032 57
+                                <span>Disponible: 08:00 – 20:00 Hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-box-contact">
+                        <h4>Adresse</h4>
+                        <div class="support-info">
+                            <div class="info-title">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                Adresse
+                                <span>Cotonou BENIN </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-box-contact">
+                        <h4>Email</h4>
+                        <div class="support-info">
+                            <div class="info-title">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                marabout.maitre@gmail.com <br>info@marabout-chiva.com
+                                <span>Pour toutes questions contactez-nous!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="container" style=" background-color: #0c5460">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.188704971896!2d2.3423771147698993!3d6.369620395390866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjInMTAuNiJOIDLCsDIwJzQwLjQiRQ!5e0!3m2!1sfr!2sbj!4v1580317192831!5m2!1sfr!2sbj" style="border:0" allowfullscreen="" width="100%" height="450" frameborder="0"></iframe>
+    </div>
+    <!-- end section -->
+
+
+    {% include 'partials/footer.html.twig' %}
+
+{% endblock %}
