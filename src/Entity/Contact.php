@@ -16,7 +16,7 @@ class Contact {
 
     /**
      * @var string
-     * @Assert\NotBlank()
+     * @Assert\NotNull()
      * @Assert\Length(min="3", max="255")
      */
     private $titre;

@@ -57,7 +57,9 @@ class HomeController extends AbstractController
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
         $contact = new Contact();
+        dd($contact);
         if($form->isSubmitted() && $form->isValid()){
+            dump($contact);
             $contact->setTitre($_POST['contact']['titre']);
             $contact->setPrenom($_POST['contact']['prenom']);
             $contact->setNom($_POST['contact']['nom']);

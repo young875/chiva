@@ -6,6 +6,7 @@ use App\Entity\Produits;
 use App\Form\ProduitsType;
 use App\Repository\ProduitsRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -44,17 +45,24 @@ class ProduitsController extends AbstractController
     }
 
     /**
-     * @Route("/admin/produits", name="admin_produits")
+     * @Route("/admin", name="admin_produits")
      * @param ProduitsRepository $produits
+     * @param PaginatorInterface $paginator
+     * @param Request $request
      * @return Response
      */
-    public function produits( ProduitsRepository $produits):Response
+    public function produits( ProduitsRepository $produits, PaginatorInterface $paginator, Request $request):Response
     {
-        $produits = $produits->findAll();
+
+        $produitsListe = $paginator->paginate(
+            $produits->findAll(), $request->query->getInt('page', 1), 20
+        );
+
+        //$produits = $produits->findAll();
 
         return $this->render('admin/produits/index.html.twig', [
 
-            'produits' => $produits,
+            'produits' => $produitsListe,
         ]);
     }
 
