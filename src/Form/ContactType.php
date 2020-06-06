@@ -32,7 +32,7 @@ class ContactType extends AbstractType
                 ]
             ])
             ->add('sujet', TextType::class, [
-                'label' => 'Nom',
+                'label' => 'Sujet',
                 'attr'=>[
                     'placeholder' => 'Sujet *'
                 ]
@@ -64,7 +64,7 @@ Je souhaite avoir des information sur : '
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Contact::class,
+            'data_class' => Contact::class
         ]);
     }
 }

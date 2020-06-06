@@ -34,6 +34,15 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact_form">
+                        {%  for label, messages in app.flashes %}
+                            <div class="container-fluid">
+                                <div class="alert alert-{{ label }}">
+                                    {% for message in messages %}
+                                        <p>{{ message | raw }}</p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
                         <!-- notifications -->
                         {{ form_start(form) }}
                         <fieldset class="row-fluid">

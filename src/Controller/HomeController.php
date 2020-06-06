@@ -29,12 +29,11 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
         $contact = new ContactIndex();
         if($form->isSubmitted() && $form->isValid()){
-            /*$contact->c($_POST['contact']['prenom']);
             $contact->setNom($_POST['contact']['nom']);
             $contact->setMail($_POST['contact']['mail']);
             $contact->setSujet($_POST['contact']['sujet']);
-            $contact->setMessage($_POST['contact']['message']);*/
-            $notification->notify($contact);
+            $contact->setMessage($_POST['contact']['message']);
+            $notification->notifyIndex($contact);
             $this->addFlash(
                 "success", "Votre message à bien été envoyer"
             );
@@ -57,9 +56,7 @@ class HomeController extends AbstractController
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
         $contact = new Contact();
-        dd($contact);
         if($form->isSubmitted() && $form->isValid()){
-            dump($contact);
             $contact->setTitre($_POST['contact']['titre']);
             $contact->setPrenom($_POST['contact']['prenom']);
             $contact->setNom($_POST['contact']['nom']);

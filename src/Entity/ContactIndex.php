@@ -9,34 +9,17 @@ use Symfony\Component\Validator\Constraints as Assert;
 class ContactIndex {
 
     /**
-     * @var string
+     * @var string|null
      * @Assert\NotBlank()
-     * @Assert\Length(min="3", max="255")
+     * @Assert\Length(min=3, max=255)
      */
     private $sujet;
 
-    /**
-     * @return string
-     */
-    public function getSujet(): string
-    {
-        return $this->sujet;
-    }
 
     /**
-     * @param string $sujet
-     * @return Contact
-     */
-    public function setSujet(string $sujet): Contact
-    {
-        $this->sujet = $sujet;
-        return $this;
-    }
-
-    /**
-     * @var string
+     * @var string|null
      * @Assert\NotBlank()
-     * @Assert\Length(min="3", max="255")
+     * @Assert\Length(min=3, max=255)
      */
     private $nom;
 
@@ -49,25 +32,43 @@ class ContactIndex {
 
 
     /**
-     * @var string
+     * @var string|null
      * @Assert\NotBlank()
-     * @Assert\Length(min="3", max="255")
+     * @Assert\Length(min=10)
      */
     private $message;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getNom(): string
+    public function getSujet(): ?string
+    {
+        return $this->sujet;
+    }
+
+    /**
+     * @param string|null $sujet
+     * @return ContactIndex
+     */
+    public function setSujet(?string $sujet): ContactIndex
+    {
+        $this->sujet = $sujet;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getNom(): ?string
     {
         return $this->nom;
     }
 
     /**
-     * @param string $nom
-     * @return Contact
+     * @param string|null $nom
+     * @return ContactIndex
      */
-    public function setNom(string $nom): Contact
+    public function setNom(?string $nom): ContactIndex
     {
         $this->nom = $nom;
         return $this;
@@ -83,31 +84,30 @@ class ContactIndex {
 
     /**
      * @param string|null $mail
-     * @return Contact
+     * @return ContactIndex
      */
-    public function setMail(?string $mail): Contact
+    public function setMail(?string $mail): ContactIndex
     {
         $this->mail = $mail;
         return $this;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
 
     /**
-     * @param string $message
-     * @return Contact
+     * @param string|null $message
+     * @return ContactIndex
      */
-    public function setMessage(string $message): Contact
+    public function setMessage(?string $message): ContactIndex
     {
         $this->message = $message;
         return $this;
     }
-
 
 }

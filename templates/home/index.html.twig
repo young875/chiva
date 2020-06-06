@@ -37,6 +37,15 @@
                 <div class="contact_form">
                     <h3><i class="fa fa-envelope-o grd1 global-radius"></i> Contactez le maître marabout chiva</h3>
                     {{ form_start(form) }}
+                    {%  for label, messages in app.flashes %}
+                        <div class="container-fluid">
+                            <div class="alert alert-{{ label }}">
+                                {% for message in messages %}
+                                    <p>{{ message | raw }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
                     <fieldset class="row-fluid">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             {{ form_widget(form.nom) }}
